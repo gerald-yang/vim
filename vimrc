@@ -7,9 +7,19 @@ set nocsverb
 
 set undolevels=500
 
+" Adjust window size
+nmap + <C-W>+
+nmap - <C-W>-
+nmap > <C-w>>
+nmap < <C-w><
+
 " Wrapped lines goes down/up to next row, rather than next line in file.
 nnoremap j gj
 nnoremap k gk
+map J <C-d>
+map K <C-u>
+map U <C-f>
+map I <C-b>
 
 "Generate ctags and cscope
 nmap <F12> : !vimindex<CR>
@@ -37,7 +47,9 @@ let g:Tlist_WinWidth = 25
 
 "NERD tree
 nmap <F4> : NERDTreeToggle<CR>
+map aa : Bookmark<CR>
 let g:NERDTreeWinPos = "right"
+let NERDTreeShowBookmarks=1
 
 "Auto complete pop
 nmap <F5> : AcpEnable<CR>
@@ -48,7 +60,13 @@ map bb : BufExplorer<CR>
 
 "Fuzzyfinder
 map ff : FufFile<CR>
+map fd : FufDir<CR>
 map ft : FufTag<CR>
+map fbf : FufBookmarkFile<CR>
+map faf : FufBookmarkFileAdd<CR>
+map fbd : FufBookmarkDir<CR>
+map fad : FufBookmarkDirAdd<CR>
+map fe : FufEditDataFile<CR>
 
 
 " from vundle
@@ -84,7 +102,6 @@ Bundle 'taglist.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'gsession.vim'
 Bundle 'echofunc.vim'
-Bundle 'vimtips.zip'
 Bundle 'SrcExpl'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
