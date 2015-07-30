@@ -4,7 +4,7 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp -r colors ~/.vim/
 cp vimrc ~/.vimrc
 mkdir -p ~/bin
-cp bin/* ~/bin/
+cp vimindex ~/bin/
 chmod +x ~/bin/*
 
 setup_path=$(grep 'export PATH=$PATH:~/bin' ~/.bashrc)
