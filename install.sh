@@ -13,6 +13,7 @@ if [ -z "$setup_path" ]; then
         echo 'export PATH=$PATH:~/bin' >> ~/.bashrc
 fi
 
-echo "-----------------------------------------------------------"
-echo "Please perform 'BundleInstall' in vim to install all plugin"
-echo "-----------------------------------------------------------"
+echo "-------------------------------------------------------------------"
+echo "Please perform 'BundleInstall' in vim to install all plugins"
+echo "Please perform 'GoInstallBinaries' in vim to install all go plugins"
+echo "-------------------------------------------------------------------"

@@ -30,6 +30,11 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+"Go
+map gf : GoDoc<CR>
+map gi : GoInfo<CR>
+au FileType go nmap gv <Plug>(go-def-vertical)
+
 "Source explorer
 nmap <F3> : SrcExplToggle<CR>
 let g:SrcExpl_winHeight = 6
@@ -40,10 +45,13 @@ let g:SrcExpl_isUpdateTags = 0
 let g:SrcExpl_updateTagsCmd = "vimindex"
 let g:SrcExpl_updateTagsKey = "<F12>"
 
+"Tagbar
+nmap <F8> :TagbarToggle<CR>
+
 "Taglist
-nmap <F2> : Tlist<CR>
-map tt : TlistOpen<CR>
-let g:Tlist_WinWidth = 25
+"nmap <F2> : Tlist<CR>
+"map tt : TlistOpen<CR>
+"let g:Tlist_WinWidth = 25
 
 "NERD tree
 nmap <F4> : NERDTreeToggle<CR>
@@ -109,6 +117,7 @@ Bundle 'chazy/cscope_maps'
 Bundle 'kien/ctrlp.vim'
 Bundle 'OmniCppComplete'
 Bundle 'AutoComplPop'
+Bundle 'fatih/vim-go'
 
 
 
