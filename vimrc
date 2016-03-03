@@ -46,7 +46,7 @@ let g:SrcExpl_updateTagsCmd = "vimindex"
 let g:SrcExpl_updateTagsKey = "<F12>"
 
 "Tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <F2> :TagbarToggle<CR>
 
 "Taglist
 "nmap <F2> : Tlist<CR>
