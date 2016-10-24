@@ -21,6 +21,9 @@ map K <C-u>
 map U <C-f>
 map I <C-b>
 
+" Zip function
+nnoremap zh zfap
+
 "Generate ctags and cscope
 nmap <F12> : !vimindex<CR>
 
@@ -35,7 +38,11 @@ map gf : GoDoc<CR>
 map gi : GoInfo<CR>
 au FileType go nmap gv <Plug>(go-def-vertical)
 
-"Source explorer
+
+"Tagbar <F2>
+nmap <F2> :TagbarToggle<CR>
+
+"Source explorer <F3>
 nmap <F3> : SrcExplToggle<CR>
 let g:SrcExpl_winHeight = 6
 let g:SrcExpl_refreshTime = 100
@@ -45,21 +52,15 @@ let g:SrcExpl_isUpdateTags = 0
 let g:SrcExpl_updateTagsCmd = "vimindex"
 let g:SrcExpl_updateTagsKey = "<F12>"
 
-"Tagbar
-nmap <F2> :TagbarToggle<CR>
-
-"Taglist
-"nmap <F2> : Tlist<CR>
-"map tt : TlistOpen<CR>
-"let g:Tlist_WinWidth = 25
-
-"NERD tree
+"NERD tree <F4>
 nmap <F4> : NERDTreeToggle<CR>
+
+
 map aa : Bookmark<CR>
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowBookmarks=1
 
-"Auto complete pop
+"Auto complete pop <F5>, <F6>
 nmap <F5> : AcpEnable<CR>
 nmap <F6> : AcpDisable<CR>
 
@@ -75,7 +76,6 @@ map faf : FufBookmarkFileAdd<CR>
 map fbd : FufBookmarkDir<CR>
 map fad : FufBookmarkDirAdd<CR>
 map fe : FufEditDataFile<CR>
-
 
 " from vundle
 set nocompatible              " be iMproved
