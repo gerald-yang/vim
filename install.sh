@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install git vim exuberant-ctags cscope
+sudo apt-get install -y git vim exuberant-ctags cscope
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp -r colors ~/.vim/
 cp vimrc ~/.vimrc
