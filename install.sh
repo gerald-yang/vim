@@ -6,6 +6,9 @@ cp vimrc ~/.vimrc
 mkdir -p ~/bin
 cp vimindex ~/bin/
 chmod +x ~/bin/*
+mkdir -p ~/.fonts
+cp Monaco_Linux.ttf ~/.fonts/
+sudo fc-cache -fv
 
 setup_path=$(grep 'export PATH=$PATH:~/bin' ~/.bashrc)
 
