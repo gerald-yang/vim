@@ -7,6 +7,9 @@ set nocsverb
 
 set undolevels=500
 
+set csprg=gtags-cscope
+cs add GTAGS
+
 " Adjust window size
 nmap + <C-W>+
 nmap - <C-W>-
@@ -33,28 +36,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-"Go
-map gf : GoDoc<CR>
-map gi : GoInfo<CR>
-au FileType go nmap gv <Plug>(go-def-vertical)
-
-
 "Tagbar <F2>
 nmap <F2> :TagbarToggle<CR>
-
-"Source explorer <F3>
-nmap <F3> : SrcExplToggle<CR>
-let g:SrcExpl_winHeight = 6
-let g:SrcExpl_refreshTime = 100
-let g:SrcExpl_jumpKey = "<ENTER>"
-let g:SrcExpl_gobackKey = "<SPACE>"
-let g:SrcExpl_isUpdateTags = 0
-let g:SrcExpl_updateTagsCmd = "vimindex"
-let g:SrcExpl_updateTagsKey = "<F12>"
-
-"NERD tree <F4>
-nmap <F4> : NERDTreeToggle<CR>
-
 
 map aa : Bookmark<CR>
 let g:NERDTreeWinPos = "right"
@@ -105,11 +88,8 @@ Bundle 'FuzzyFinder'
 " ...
 
 Bundle 'wincent/Command-T'
-Bundle 'The-NERD-tree'
-Bundle 'taglist.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'echofunc.vim'
-Bundle 'SrcExpl'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle 'chazy/cscope_maps'
