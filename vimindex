@@ -1,4 +1,4 @@
 #!/bin/sh
 
-find . -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.hpp" -o -name "*.s" -o -name "*.S" > gfiles
-gtags -i -f gfiles
+find . -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.cc" -o -name "*.hpp" -o -name "*.s" -o -name "*.S" > GFILES
+gtags -i -f GFILES
