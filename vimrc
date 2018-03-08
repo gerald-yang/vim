@@ -1,5 +1,5 @@
-set t_Co=256
-colorscheme colorful256
+"set t_Co=256
+colorscheme seattle
 " set mouse=a
 set nu
 set rnu
