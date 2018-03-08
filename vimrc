@@ -1,5 +1,5 @@
 "set t_Co=256
-colorscheme seattle
+colorscheme molokai
 " set mouse=a
 set nu
 set rnu
