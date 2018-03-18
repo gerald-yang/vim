@@ -1,4 +1,3 @@
-"set t_Co=256
 colorscheme molokai
 " set mouse=a
 set nu
@@ -27,7 +26,7 @@ map I <C-b>
 " Zip function
 nnoremap zh zfap
 
-"Generate ctags and cscope
+"Generate gtags
 nmap <F12> : !vimindex<CR>
 
 "Jump between windows
@@ -96,7 +95,6 @@ Bundle 'chazy/cscope_maps'
 Bundle 'kien/ctrlp.vim'
 Bundle 'OmniCppComplete'
 Bundle 'AutoComplPop'
-Bundle 'fatih/vim-go'
 
 
 
