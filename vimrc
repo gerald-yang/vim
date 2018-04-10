@@ -95,6 +95,7 @@ Bundle 'chazy/cscope_maps'
 Bundle 'kien/ctrlp.vim'
 Bundle 'OmniCppComplete'
 Bundle 'AutoComplPop'
+Bundle 'will133/vim-dirdiff'
 
 
 
