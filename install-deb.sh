@@ -1,6 +1,7 @@
 sudo apt-get update
 sudo apt-get install -y git vim global
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+mkdir -p ~/.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp -r colors ~/.vim/
 cp vimrc ~/.vimrc
 mkdir -p ~/bin
@@ -17,5 +18,7 @@ if [ -z "$setup_path" ]; then
 fi
 
 echo "-------------------------------------------------------------------"
-echo "Please perform 'BundleInstall' in vim to install all plugins"
+echo "Please compile YouCompleteMe"
+echo "goto ~/.vim/plugged/YouCompleteMe and run 'python3 install.py --clang-completer'"
+echo "Please perform 'PlugInstall' in vim to install all plugins"
 echo "-------------------------------------------------------------------"

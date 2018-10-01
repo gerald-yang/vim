@@ -1,4 +1,11 @@
-colorscheme molokai
+set background=dark
+"colorscheme solarized
+"colorscheme jellybeans
+"colorscheme molokai
+colorscheme gruvbox
+
+" For YouCompleteMe
+set encoding=utf-8
 " set mouse=a
 set nu
 set rnu
@@ -23,89 +30,62 @@ map K <C-u>
 map U <C-f>
 map I <C-b>
 
-" Zip function
-nnoremap zh zfap
-
-"Generate gtags
+" Generate gtags
 nmap <F12> : !vimindex<CR>
 
-"Jump between windows
+" Jump between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-"Tagbar <F2>
+" Explore
+map ef :Explore<CR>
+map ed :bd<CR>
+
+" CtrlP
+map ff :CtrlP<CR>
+map bb :CtrlPBuffer<CR>
+
+" CtrlPFunky
+nmap <C-f> :CtrlPFunky<CR>
+let g:ctrlp_extensions = ['funky']
+let g:ctrlp_funky_syntax_highlight = 1
+
+" Tagbar <F2>
 nmap <F2> :TagbarToggle<CR>
 
-map aa : Bookmark<CR>
-let g:NERDTreeWinPos = "right"
-let NERDTreeShowBookmarks=1
+" Nerdtree
+nmap <F3> :NERDTreeToggle<CR>
 
-"Auto complete pop <F5>, <F6>
-nmap <F5> : AcpEnable<CR>
-nmap <F6> : AcpDisable<CR>
+" git-gutter
+nmap <F4> :GitGutterToggle<CR>
+nmap <F5> :GitGutterLineHighlightsToggle<CR>
+map gn :GitGutterNextHunk<CR>
+map gp :GitGutterPrevHunk<CR>
+"let g:gitgutter_signs = 0
 
-"Buffer explorer
-map bb : BufExplorer<CR>
+" vim-plug session begin
+call plug#begin('~/.vim/plugged')
 
-"Fuzzyfinder
-map ff : FufFile<CR>
-map fd : FufDir<CR>
-map ft : FufTag<CR>
-map fbf : FufBookmarkFile<CR>
-map faf : FufBookmarkFileAdd<CR>
-map fbd : FufBookmarkDir<CR>
-map fad : FufBookmarkDirAdd<CR>
-map fe : FufEditDataFile<CR>
+" My plugins
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'majutsushi/tagbar'
+Plug 'chazy/cscope_maps'
+Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Townk/vim-autoclose'
+Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+"Plug 'AutoComplPop'
+"Plug 'will133/vim-dirdiff'
 
-" from vundle
-set nocompatible              " be iMproved
-filetype off                  " required!
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My bundles here:
-"
-" original repos on GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" non-GitHub repos
-"Bundle 'git://git.wincent.com/command-t.git'
-" Git repos on your local machine (i.e. when working on your own plugin)
-"Bundle 'file:///Users/gmarik/path/to/plugin'
-" ...
-
-Bundle 'wincent/Command-T'
-Bundle 'bufexplorer.zip'
-Bundle 'echofunc.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim'
-Bundle 'chazy/cscope_maps'
-Bundle 'kien/ctrlp.vim'
-Bundle 'OmniCppComplete'
-Bundle 'AutoComplPop'
-Bundle 'will133/vim-dirdiff'
-
-
-
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+"vim-plug session end
+call plug#end()
