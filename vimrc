@@ -1,11 +1,12 @@
 set background=dark
 "colorscheme solarized
-"colorscheme jellybeans
+colorscheme jellybeans
 "colorscheme molokai
-colorscheme gruvbox
+"colorscheme gruvbox
 
 " For YouCompleteMe
 set encoding=utf-8
+
 " set mouse=a
 set nu
 set rnu
@@ -39,10 +40,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Explore
-map ef :Explore<CR>
-map ed :bd<CR>
-
 " CtrlP
 map ff :CtrlP<CR>
 map bb :CtrlPBuffer<CR>
@@ -65,6 +62,21 @@ map gn :GitGutterNextHunk<CR>
 map gp :GitGutterPrevHunk<CR>
 "let g:gitgutter_signs = 0
 
+" airline
+"let g:airline_section_a       (mode, crypt, paste, spell, iminsert)
+"let g:airline_section_b       (hunks, branch)[*]
+"let g:airline_section_c       (bufferline or filename)
+"let g:airline_section_gutter  (readonly, csv)
+"let g:airline_section_x       (tagbar, filetype, virtualenv)
+"let g:airline_section_y       (fileencoding, fileformat)
+"let g:airline_section_z       (percentage, line number, column number)
+"let g:airline_section_error   (ycm_error_count, syntastic-err, eclim, languageclient_error_count)
+"let g:airline_section_warning (ycm_warning_count, syntastic-warn, languageclient_warning_count, whitespace)
+let g:airline_section_b = ''
+let g:airline_section_error = ''
+let g:airline_section_warning = ''
+let g:airline_theme='violet'
+
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
 
@@ -80,10 +92,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Townk/vim-autoclose'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
 "Plug 'AutoComplPop'
 "Plug 'will133/vim-dirdiff'
 

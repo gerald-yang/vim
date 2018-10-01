@@ -17,7 +17,7 @@ if [ -z "$setup_path" ]; then
 fi
 
 echo "-------------------------------------------------------------------"
-echo "Please compile YouCompleteMe"
-echo "goto ~/.vim/plugged/YouCompleteMe and run 'python3 install.py --clang-completer'"
 echo "Please perform 'PlugInstall' in vim to install all plugins"
+echo "and compile YouCompleteMe:"
+echo "goto ~/.vim/plugged/YouCompleteMe and run 'python3 install.py --clang-completer'"
 echo "-------------------------------------------------------------------"
