@@ -75,6 +75,8 @@ map gp :GitGutterPrevHunk<CR>
 let g:airline_section_b = ''
 let g:airline_section_error = ''
 let g:airline_section_warning = ''
+
+" vim-airline-theme, themes are located in ~/.vim/plugged/vim-airline-themes/autoload/airline/themes
 let g:airline_theme='violet'
 
 " vim-plug session begin
