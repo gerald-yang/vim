@@ -1,3 +1,18 @@
+if has("gui_running")
+  set gfn=Monaco\ 12
+endif
+
+" fold settings, zc: fold, zo: unfold
+set foldmethod=syntax
+set foldlevelstart=999
+" fold usage:
+" zc: fold current function
+" zo: unfold current function
+" zC: fold to the top of the current function
+" zO: unfold top top of the current function
+" zM: fold all
+" zR: unfold all
+
 set background=dark
 "colorscheme solarized
 colorscheme jellybeans
@@ -49,11 +64,11 @@ nmap <C-f> :CtrlPFunky<CR>
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 
-" Tagbar <F2>
-nmap <F2> :TagbarToggle<CR>
-
 " Nerdtree
-nmap <F3> :NERDTreeToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
+
+" Tagbar
+nmap <F3> :TagbarToggle<CR>
 
 " git-gutter
 nmap <F4> :GitGutterToggle<CR>
