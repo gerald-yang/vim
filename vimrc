@@ -2,6 +2,17 @@ if has("gui_running")
   set gfn=Monaco\ 12
 endif
 
+set background=dark
+"colorscheme solarized
+colorscheme jellybeans
+"colorscheme molokai
+"colorscheme gruvbox
+
+" highlight search result
+set hlsearch
+hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray
+map mm :nohlsearch<CR>
+
 " fold settings, zc: fold, zo: unfold
 set foldmethod=syntax
 set foldlevelstart=999
@@ -12,12 +23,6 @@ set foldlevelstart=999
 " zO: unfold top top of the current function
 " zM: fold all
 " zR: unfold all
-
-set background=dark
-"colorscheme solarized
-colorscheme jellybeans
-"colorscheme molokai
-"colorscheme gruvbox
 
 " For YouCompleteMe
 set encoding=utf-8
@@ -55,9 +60,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" CtrlP
+" CtrlP, run 'Ctrl+D' in prompt to switch between filename and fullpath modes
 map ff :CtrlP<CR>
 map bb :CtrlPBuffer<CR>
+let g:ctrlp_by_filename = 1
 
 " CtrlPFunky
 nmap <C-f> :CtrlPFunky<CR>
