@@ -60,6 +60,7 @@ nmap <F4> :GitGutterToggle<CR>
 nmap <F5> :GitGutterLineHighlightsToggle<CR>
 map gn :GitGutterNextHunk<CR>
 map gp :GitGutterPrevHunk<CR>
+set updatetime=1000
 "let g:gitgutter_signs = 0
 
 " airline
@@ -79,6 +80,12 @@ let g:airline_section_warning = ''
 " vim-airline-theme, themes are located in ~/.vim/plugged/vim-airline-themes/autoload/airline/themes
 let g:airline_theme='violet'
 
+" vim-gutentags
+let g:gutentags_project_root = ['.root', '.git']
+let g:gutentags_modules = ['gtags_cscope']
+let g:gutentags_cache_dir = expand('~/.cache/gtags')
+"let g:gutentags_auto_add_gtags_cscope = 0
+
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
 
@@ -95,9 +102,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'Townk/vim-autoclose'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'ludovicchabant/vim-gutentags'
 "Plug 'AutoComplPop'
 "Plug 'will133/vim-dirdiff'
 
