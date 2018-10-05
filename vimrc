@@ -2,6 +2,9 @@ if has("gui_running")
   set gfn=Monaco\ 12
 endif
 
+" save current session
+nmap <C-y> :mksession! .session.vim<CR>
+
 set background=dark
 "colorscheme solarized
 colorscheme jellybeans
