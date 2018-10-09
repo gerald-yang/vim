@@ -14,6 +14,7 @@ colorscheme jellybeans
 " highlight search result
 set hlsearch
 hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray
+map mn :hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray<CR>
 map mm :nohlsearch<CR>
 
 " fold settings, zc: fold, zo: unfold
