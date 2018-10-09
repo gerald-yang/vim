@@ -134,3 +134,5 @@ Plug 'ludovicchabant/vim-gutentags'
 
 "vim-plug session end
 call plug#end()
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
