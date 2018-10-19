@@ -68,6 +68,7 @@ map <C-l> <C-W>l
 map ff :CtrlP<CR>
 map bb :CtrlPBuffer<CR>
 let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 0
 
 " CtrlPFunky
 nmap <C-f> :CtrlPFunky<CR>
@@ -85,7 +86,7 @@ nmap <F4> :GitGutterToggle<CR>
 nmap <F5> :GitGutterLineHighlightsToggle<CR>
 map gn :GitGutterNextHunk<CR>
 map gp :GitGutterPrevHunk<CR>
-set updatetime=1000
+set updatetime=300
 "let g:gitgutter_signs = 0
 
 " airline
@@ -136,4 +137,4 @@ Plug 'ludovicchabant/vim-gutentags'
 "vim-plug session end
 call plug#end()
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
