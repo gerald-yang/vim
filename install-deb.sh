@@ -1,4 +1,4 @@
-sudo apt-get install -y git vim global
+sudo apt-get install -y git vim global python3-dev
 mkdir -p ~/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp ycm_extra_conf.py ~/.vim/
