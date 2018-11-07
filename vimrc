@@ -11,6 +11,9 @@ colorscheme jellybeans
 "colorscheme molokai
 "colorscheme gruvbox
 
+" use space instead of tab, execute ':retab' in vim to convert tab to space
+set expandtab
+
 " highlight search result
 set hlsearch
 hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray
@@ -54,9 +57,6 @@ map J <C-d>
 map K <C-u>
 map U <C-f>
 map I <C-b>
-
-" Generate gtags
-nmap <F12> : !vimindex<CR>
 
 " Jump between windows
 map <C-j> <C-W>j
@@ -125,7 +125,7 @@ Plug 'chazy/cscope_maps'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'Townk/vim-autoclose'
+Plug 'Raimondi/delimitMate'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
