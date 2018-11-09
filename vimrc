@@ -38,6 +38,10 @@ set encoding=utf-8
 set nu
 set rnu
 set nocsverb
+" no line number
+nmap <C-a> :set nornu<CR>:set nonu<CR>
+" set line number
+nmap <C-m> :set nu<CR>:set rnu<CR>
 
 set undolevels=500
 
