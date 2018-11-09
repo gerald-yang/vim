@@ -73,6 +73,9 @@ map ff :CtrlP<CR>
 map bb :CtrlPBuffer<CR>
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
+"set wildignore+=*.o,*.a
+"let g:ctrlp_custom_ignore = '\v[\/]\.(o|a)$'
+let g:ctrlp_user_command = 'find %s -type f -name *.cc -o -name *.h'
 
 " CtrlPFunky
 nmap <C-f> :CtrlPFunky<CR>
