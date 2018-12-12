@@ -4,6 +4,7 @@ endif
 
 " save current session
 nmap <C-y> :mksession! .session.vim<CR>
+nmap <C-w> :split<CR>
 
 set background=dark
 "colorscheme solarized
@@ -75,7 +76,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
 "set wildignore+=*.o,*.a
 "let g:ctrlp_custom_ignore = '\v[\/]\.(o|a)$'
-let g:ctrlp_user_command = 'find %s -type f -name *.cc -o -name *.h'
+let g:ctrlp_user_command = 'find %s -type f -name *.cc -o -name *.h -o -name *.hpp'
 
 " CtrlPFunky
 nmap <C-f> :CtrlPFunky<CR>
