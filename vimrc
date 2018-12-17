@@ -4,7 +4,8 @@ endif
 
 " save current session
 nmap <C-y> :mksession! .session.vim<CR>
-nmap <C-w> :split<CR>
+map ww :split<CR>
+map wv :vsplit<CR>
 
 set background=dark
 "colorscheme solarized
