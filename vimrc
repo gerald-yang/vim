@@ -13,6 +13,11 @@ colorscheme jellybeans
 "colorscheme molokai
 "colorscheme gruvbox
 
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
 " use space instead of tab, execute ':retab' in vim to convert tab to space
 set expandtab
 
