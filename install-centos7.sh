@@ -3,7 +3,7 @@ mkdir -p ~/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp ycm_extra_conf.py ~/.vim/
 cp -r colors ~/.vim/
-cp vimrc ~/.vimrc
+cp vimrc-centos7 ~/.vimrc
 mkdir -p ~/bin
 cp vimindex ~/bin/
 chmod +x ~/bin/*
@@ -19,6 +19,4 @@ fi
 
 echo "-------------------------------------------------------------------"
 echo "Please perform 'PlugInstall' in vim to install all plugins"
-echo "and compile YouCompleteMe:"
-echo "goto ~/.vim/plugged/YouCompleteMe and run 'python3 install.py --clang-completer'"
 echo "-------------------------------------------------------------------"
