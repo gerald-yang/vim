@@ -39,7 +39,7 @@ set foldlevelstart=999
 " zR: unfold all
 
 " For YouCompleteMe
-"set encoding=utf-8
+set encoding=utf-8
 
 " set mouse=a
 set nu
