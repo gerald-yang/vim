@@ -2,6 +2,13 @@ if has("gui_running")
   set gfn=Monaco\ 12
 endif
 
+" workaround for teamviewer
+map mm <C-]>
+map ms <C-\>s
+map me <C-\>e
+map mc <C-\>c
+nmap <C-m> <C-\>
+
 " save current session
 nmap <C-y> :mksession! .session.vim<CR>
 map ww :split<CR>
@@ -25,7 +32,7 @@ set expandtab
 set hlsearch
 hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray
 map mn :hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray<CR>
-map mm :nohlsearch<CR>
+map nh :nohlsearch<CR>
 
 " fold settings, zc: fold, zo: unfold
 set foldmethod=syntax
@@ -48,7 +55,7 @@ set nocsverb
 " no line number
 nmap <C-a> :set nornu<CR>:set nonu<CR>
 " set line number
-nmap <C-m> :set nu<CR>:set rnu<CR>
+nmap <C-e> :set nu<CR>:set rnu<CR>
 
 set undolevels=500
 
