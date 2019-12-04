@@ -2,7 +2,7 @@ if has("gui_running")
   set gfn=Monaco\ 12
 endif
 
-" workaround for teamviewer
+" use 'm' as the leader character, workaround teamviewer
 map mm <C-]>
 map ms <C-\>s
 map me <C-\>e
@@ -21,12 +21,14 @@ colorscheme jellybeans
 "colorscheme gruvbox
 
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+
+" ceph: 4, kernel 8(default)
+"set tabstop=4
+"set shiftwidth=4
+"set softtabstop=4
 
 " use space instead of tab, execute ':retab' in vim to convert tab to space
-set expandtab
+"set expandtab
 
 " highlight search result
 set hlsearch
@@ -98,13 +100,17 @@ let g:ctrlp_funky_syntax_highlight = 1
 
 " Nerdtree
 nmap <F2> :NERDTreeToggle<CR>
+map m2 :NERDTreeToggle<CR>
 
 " Tagbar
 nmap <F3> :TagbarToggle<CR>
+map m3 :TagbarToggle<CR>
 
 " git-gutter
 nmap <F4> :GitGutterToggle<CR>
+map m4 :GitGutterToggle<CR>
 nmap <F5> :GitGutterLineHighlightsToggle<CR>
+map m5 :GitGutterLineHighlightsToggle<CR>
 map gn :GitGutterNextHunk<CR>
 map gp :GitGutterPrevHunk<CR>
 set updatetime=300
