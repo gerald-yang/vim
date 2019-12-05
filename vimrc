@@ -2,7 +2,9 @@ if has("gui_running")
   set gfn=Monaco\ 12
 endif
 
-" use 'm' as the leader character, workaround teamviewer
+" use m as my customized leader character
+
+" gtags wrapper for cscope, also workaround for teamviewer
 map mm <C-]>
 map ms <C-\>s
 map me <C-\>e
@@ -10,9 +12,10 @@ map mc <C-\>c
 nmap <C-m> <C-\>
 
 " save current session
+map my :mksession! .session.vim<CR>
 nmap <C-y> :mksession! .session.vim<CR>
-map ww :split<CR>
-map wv :vsplit<CR>
+map mh :split<CR>
+map mv :vsplit<CR>
 
 set background=dark
 "colorscheme solarized
@@ -55,8 +58,10 @@ set nu
 set rnu
 set nocsverb
 " no line number
+map ma :set nornu<CR>:set nonu<CR>
 nmap <C-a> :set nornu<CR>:set nonu<CR>
 " set line number
+map me :set nu<CR>:set rnu<CR>
 nmap <C-e> :set nu<CR>:set rnu<CR>
 
 set undolevels=500
@@ -94,23 +99,24 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_user_command = 'find %s -type f -name *.cc -o -name *.c -o -name *.h -o -name *.hpp'
 
 " CtrlPFunky
+map mf :CtrlPFunky<CR>
 nmap <C-f> :CtrlPFunky<CR>
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 
 " Nerdtree
-nmap <F2> :NERDTreeToggle<CR>
 map m2 :NERDTreeToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
 
 " Tagbar
-nmap <F3> :TagbarToggle<CR>
 map m3 :TagbarToggle<CR>
+nmap <F3> :TagbarToggle<CR>
 
 " git-gutter
-nmap <F4> :GitGutterToggle<CR>
 map m4 :GitGutterToggle<CR>
-nmap <F5> :GitGutterLineHighlightsToggle<CR>
+nmap <F4> :GitGutterToggle<CR>
 map m5 :GitGutterLineHighlightsToggle<CR>
+nmap <F5> :GitGutterLineHighlightsToggle<CR>
 map gn :GitGutterNextHunk<CR>
 map gp :GitGutterPrevHunk<CR>
 set updatetime=300
