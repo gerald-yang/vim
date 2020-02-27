@@ -61,7 +61,7 @@ set nocsverb
 map ma :set nornu<CR>:set nonu<CR>
 nmap <C-a> :set nornu<CR>:set nonu<CR>
 " set line number
-map me :set nu<CR>:set rnu<CR>
+map mz :set nu<CR>:set rnu<CR>
 nmap <C-e> :set nu<CR>:set rnu<CR>
 
 set undolevels=500

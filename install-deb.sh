@@ -1,4 +1,4 @@
-sudo apt-get install -y git vim global python3-dev
+sudo apt-get install -y git vim global python3-dev curl exuberant-ctags
 mkdir -p ~/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp ycm_extra_conf.py ~/.vim/
@@ -6,7 +6,9 @@ cp -r colors ~/.vim/
 cp vimrc ~/.vimrc
 mkdir -p ~/bin
 cp vimindex ~/bin/
-chmod +x ~/bin/*
+cp copy-ycm-conf.sh ~/bin/
+chmod +x ~/bin/vimindex
+chmod +x ~/bin/copy-ycm-conf.sh
 mkdir -p ~/.fonts
 cp Monaco_Linux.ttf ~/.fonts/
 sudo fc-cache -fv
