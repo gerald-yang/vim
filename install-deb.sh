@@ -1,4 +1,5 @@
-sudo apt-get install -y git vim global python3-dev curl exuberant-ctags
+sudo apt update
+sudo apt-get install -y git vim global python3-dev curl exuberant-ctags fontconfig
 mkdir -p ~/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp ycm_extra_conf.py ~/.vim/
