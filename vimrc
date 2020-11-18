@@ -164,6 +164,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'will133/vim-dirdiff'
 "Plug 'AutoComplPop'
 "Plug 'will133/vim-dirdiff'
 
