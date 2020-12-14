@@ -4,16 +4,14 @@ endif
 
 " use m as my customized leader character
 
-" gtags wrapper for cscope, also workaround for teamviewer
+" gtags wrapper for cscope
 map mm <C-]>
 map ms <C-\>s
 map me <C-\>e
 map mc <C-\>c
-nmap <C-m> <C-\>
 
 " save current session
 map my :mksession! .session.vim<CR>
-nmap <C-y> :mksession! .session.vim<CR>
 map mh :split<CR>
 map mv :vsplit<CR>
 
@@ -31,7 +29,7 @@ set smartindent
 "set softtabstop=4
 
 " use space instead of tab, execute ':retab' in vim to convert tab to space
-"set expandtab
+set expandtab
 
 " highlight search result
 set hlsearch
@@ -100,23 +98,18 @@ let g:ctrlp_user_command = 'find %s -type f -name *.cc -o -name *.c -o -name *.h
 
 " CtrlPFunky
 map mf :CtrlPFunky<CR>
-nmap <C-f> :CtrlPFunky<CR>
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 
 " Nerdtree
 map m2 :NERDTreeToggle<CR>
-nmap <F2> :NERDTreeToggle<CR>
 
 " Tagbar
 map m3 :TagbarToggle<CR>
-nmap <F3> :TagbarToggle<CR>
 
 " git-gutter
 map m4 :GitGutterToggle<CR>
-nmap <F4> :GitGutterToggle<CR>
 map m5 :GitGutterLineHighlightsToggle<CR>
-nmap <F5> :GitGutterLineHighlightsToggle<CR>
 map gn :GitGutterNextHunk<CR>
 map gp :GitGutterPrevHunk<CR>
 set updatetime=300
@@ -145,6 +138,10 @@ let g:gutentags_modules = ['gtags_cscope']
 let g:gutentags_cache_dir = expand('~/.cache/gtags')
 "let g:gutentags_auto_add_gtags_cscope = 0
 
+" python-mode
+let g:pymode_rope = 1
+let g:pymode_rope_goto_definition_bind = 'mp'
+
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
 
@@ -165,8 +162,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'will133/vim-dirdiff'
+Plug 'python-mode/python-mode'
+Plug 'davidhalter/jedi-vim'
 "Plug 'AutoComplPop'
-"Plug 'will133/vim-dirdiff'
 
 "vim-plug session end
 call plug#end()
