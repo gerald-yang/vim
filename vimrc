@@ -142,6 +142,12 @@ let g:gutentags_cache_dir = expand('~/.cache/gtags')
 let g:pymode_rope = 1
 let g:pymode_rope_goto_definition_bind = 'mp'
 
+" jedi-vim
+let g:jedi#documentation_command = "mk"
+let g:jedi#max_doc_height = 20
+let g:jedi#goto_command = "mg"
+let g:jedi#goto_assignments_command = "mj"
+
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
 
@@ -152,7 +158,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'majutsushi/tagbar'
 Plug 'chazy/cscope_maps'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Raimondi/delimitMate'
@@ -162,7 +168,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'will133/vim-dirdiff'
-Plug 'python-mode/python-mode'
+"Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
 "Plug 'AutoComplPop'
 
