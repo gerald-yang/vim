@@ -103,6 +103,7 @@ let g:ctrlp_funky_syntax_highlight = 1
 
 " Nerdtree
 map m2 :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=25
 
 " Tagbar
 map m3 :TagbarToggle<CR>
