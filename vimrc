@@ -149,6 +149,15 @@ let g:jedi#max_doc_height = 20
 let g:jedi#goto_command = "mg"
 let g:jedi#goto_assignments_command = "mj"
 
+" vim-go
+map gb :GoBuild<CR>
+map gr :GoRun<CR>
+" :GoDef but opens in a vertical split
+autocmd FileType go nmap gv <Plug>(go-def-vertical)
+" :GoDef but opens in a horizontal split
+autocmd FileType go nmap gs <Plug>(go-def-split)
+
+
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
 
@@ -172,6 +181,7 @@ Plug 'will133/vim-dirdiff'
 "Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
 "Plug 'AutoComplPop'
+Plug 'fatih/vim-go'
 
 "vim-plug session end
 call plug#end()
