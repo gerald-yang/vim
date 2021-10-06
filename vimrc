@@ -152,6 +152,7 @@ let g:jedi#goto_assignments_command = "mj"
 " vim-go
 map gb :GoBuild<CR>
 map gr :GoRun<CR>
+map gq :GoDoc<CR>
 " :GoDef but opens in a vertical split
 autocmd FileType go nmap gv <Plug>(go-def-vertical)
 " :GoDef but opens in a horizontal split
