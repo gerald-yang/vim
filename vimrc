@@ -157,6 +157,7 @@ map gq :GoDoc<CR>
 autocmd FileType go nmap gv <Plug>(go-def-vertical)
 " :GoDef but opens in a horizontal split
 autocmd FileType go nmap gs <Plug>(go-def-split)
+let g:go_doc_keywordprg_enabled = 0
 
 
 " vim-plug session begin
