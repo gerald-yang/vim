@@ -153,6 +153,13 @@ let g:jedi#goto_assignments_command = "mj"
 map gb :GoBuild<CR>
 map gr :GoRun<CR>
 map gq :GoDoc<CR>
+map gi :GoImplements<CR>
+map gcr :GoCallers<CR>
+map gce :GoCallees<CR>
+map gs :GoReferrers<CR>
+map gcs :GoCallstack<CR>
+map gpt :GoPointsTo<CR>
+map gpr :GoPeers<CR>
 " :GoDef but opens in a vertical split
 autocmd FileType go nmap gv <Plug>(go-def-vertical)
 " :GoDef but opens in a horizontal split
