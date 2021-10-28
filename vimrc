@@ -163,9 +163,24 @@ map gpr :GoPeers<CR>
 " :GoDef but opens in a vertical split
 autocmd FileType go nmap gv <Plug>(go-def-vertical)
 " :GoDef but opens in a horizontal split
-autocmd FileType go nmap gs <Plug>(go-def-split)
+autocmd FileType go nmap gh <Plug>(go-def-split)
+" Do not use K
 let g:go_doc_keywordprg_enabled = 0
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
 
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures
+let g:go_auto_type_info = 1
+
+au filetype go inoremap <buffer> . .<C-x><C-o>
 
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
