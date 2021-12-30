@@ -153,6 +153,9 @@ let g:jedi#goto_assignments_command = "mj"
 map gb :GoBuild<CR>
 map gr :GoRun<CR>
 map gq :GoDoc<CR>
+" built-in: gd (goto definition)
+map gt :GoDefType<CR>
+" GoImplements list implementations of an interface
 map gi :GoImplements<CR>
 map gcr :GoCallers<CR>
 map gce :GoCallees<CR>
