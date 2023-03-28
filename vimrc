@@ -88,13 +88,18 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " CtrlP, run 'Ctrl+D' in prompt to switch between filename and fullpath modes
-map ff :CtrlP<CR>
-map bb :CtrlPBuffer<CR>
-let g:ctrlp_by_filename = 1
-let g:ctrlp_max_files = 0
+"map bb :CtrlPBuffer<CR>
+"let g:ctrlp_by_filename = 1
+"let g:ctrlp_max_files = 0
 "set wildignore+=*.o,*.a
 "let g:ctrlp_custom_ignore = '\v[\/]\.(o|a)$'
-let g:ctrlp_user_command = 'find %s -type f -name *.cc -o -name *.c -o -name *.h -o -name *.hpp'
+"let g:ctrlp_user_command = 'find %s -type f -name *.cc -o -name *.c -o -name *.h -o -name *.hpp'
+
+" fzf
+map ff :Files<CR>
+map fb :Buffer<CR>
+map fg :GFiles?<CR>
+map fc :Commits<CR>
 
 " CtrlPFunky
 map mf :CtrlPFunky<CR>
@@ -209,6 +214,7 @@ Plug 'will133/vim-dirdiff'
 Plug 'davidhalter/jedi-vim'
 "Plug 'AutoComplPop'
 Plug 'fatih/vim-go'
+Plug 'madox2/vim-ai', { 'do': './install.sh' }
 
 "vim-plug session end
 call plug#end()

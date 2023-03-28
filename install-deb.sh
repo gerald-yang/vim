@@ -22,6 +22,7 @@ fi
 
 echo "-------------------------------------------------------------------"
 echo "Please perform 'PlugInstall' in vim to install all plugins"
+echo "Fix gtags issue: chmod +x ~/.vim/plugged/vim-gutentags/plat/unix/update_gtags.sh"
 echo "For C++, please enable YouCompleteMe plugin in vimrc and compile it:"
 echo "goto ~/.vim/plugged/YouCompleteMe and run 'python3 install.py --clang-completer'"
 echo "-------------------------------------------------------------------"
