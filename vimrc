@@ -188,6 +188,14 @@ let g:go_fmt_command = "goimports"
 " Status line types/signatures
 let g:go_auto_type_info = 1
 
+" vim-ai
+let g:vim_ai_chat = {
+\  "options": {
+\    "model": "gpt-4",
+\    "temperature": 0.2,
+\  },
+\}
+
 au filetype go inoremap <buffer> . .<C-x><C-o>
 
 " vim-plug session begin
