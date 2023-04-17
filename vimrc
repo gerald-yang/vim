@@ -191,8 +191,8 @@ let g:go_auto_type_info = 1
 " vim-ai
 let g:vim_ai_chat = {
 \  "options": {
-\    "model": "gpt-4",
-\    "temperature": 0.2,
+\    "model": "code-davinci-002",
+\    "temperature": 0,
 \  },
 \}
 
