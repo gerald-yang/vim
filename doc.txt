@@ -1,0 +1,56 @@
+=== split window ===
+map mh :split<CR>
+map mv :vsplit<CR>
+
+=== line number ===
+no line number: ma
+set line number: mz
+
+=== python jedi-vim ===
+documentation_command = "mk"
+goto_command = "mg"
+goto_assignments_command = "mj"
+
+=== vim-go ===
+gb :GoBuild
+gr :GoRun
+gq :GoDoc
+gd :goto definition
+gt :GoDefType
+gi :GoImplements
+gcr :GoCallers
+gce :GoCallees
+gs :GoReferrers
+gcs :GoCallstack
+gpt :GoPointsTo
+gpr :GoPeers
+gv :GoDef but opens in a vertical split
+gh :GoDef but opens in a horizontal split
+
+=== vim-ai ===
+:AI
+:AIEdit
+:AIChat
+
+=== vim-chatgpt ===
+Ask questions
+
+:Ask '<prompt>' Sends your raw prompt to the ChatGPT API.
+To use this command, type :Ask followed by your prompt.
+
+Code
+Highlight lines of code by 'v', then use the following commmands
+
+:<>Review Sends the highlighted code to ChatGPT and requests a review.
+
+:<>Explain '<context>' Sends the highlighted code to ChatGPT and requests an explanation, with the option to include additional context.
+
+:<>Rewrite '<context>' Sends the highlighted code to ChatGPT and requests a rewritten version, with the option to include additional context.
+
+:<>Test '<context>' Sends the highlighted code to ChatGPT and requests it writes a test, with the option to include additional context.
+
+:<>Fix '<context>' Sends the highlighted code to ChatGPT and that it fixes any errors it may find, with the option to include additional context.
+
+:<>Document '<context>' Sends the highlighted code to ChatGPT and requests documentation, with the option to include additional context.
+
+
