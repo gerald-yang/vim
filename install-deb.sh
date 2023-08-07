@@ -26,6 +26,7 @@ fi
 echo "Install GO? y or n: "
 read INSTALL_GO
 if [ "$INSTALL_GO" = "y" ] ; then
+        sudo snap install go --classic
         setup_gopath=$(grep 'export GOPATH' ~/.bashrc)
 
         if [ -z "$setup_gopath" ]; then
