@@ -191,10 +191,15 @@ let g:go_auto_type_info = 1
 " vim-ai
 let g:vim_ai_chat = {
 \  "options": {
-\    "model": "code-davinci-002",
+\    "model": "gpt-3.5-turbo",
 \    "temperature": 0,
 \  },
 \}
+
+" vim-chatgpt
+let g:chat_gpt_model='gpt-3.5-turbo'
+let g:chat_gpt_session_mode=1
+let g:chat_gpt_temperature = 0
 
 au filetype go inoremap <buffer> . .<C-x><C-o>
 
@@ -223,6 +228,7 @@ Plug 'davidhalter/jedi-vim'
 "Plug 'AutoComplPop'
 Plug 'fatih/vim-go'
 Plug 'madox2/vim-ai', { 'do': './install.sh' }
+Plug 'CoderCookE/vim-chatgpt'
 
 "vim-plug session end
 call plug#end()
