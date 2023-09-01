@@ -53,4 +53,11 @@ Highlight lines of code by 'v', then use the following commmands
 
 :<>Document '<context>' Sends the highlighted code to ChatGPT and requests documentation, with the option to include additional context.
 
+=== issue ===
+Error detected while processing /home/ubuntu/.vim/plugged/vim-chatgpt/plugin/chatgpt.vim:
+line   29:
+/usr/lib/python3/dist-packages/requests/__init__.py:87: RequestsDependencyWarning: urllib3 (2.0.4) or chardet (4.0.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
 
+Solution:
+pip3 install --upgrade requests
