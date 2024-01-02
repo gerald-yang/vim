@@ -1,8 +1,13 @@
 sudo apt update
-sudo apt-get install -y git vim global python3-dev curl exuberant-ctags fontconfig python3-pip python-is-python3
-pip install --upgrade openai
-pip install openai[embeddings]
-pip install openai[wandb]
+sudo apt-get install -y git vim global python3-dev curl exuberant-ctags fontconfig
+echo "Install OpenAI? y or n: "
+read INSTALL_OPENAI
+if [ "$INSTALL_OPENAI" = "y" ] ; then
+        sudo apt install -y python3-pip python-is-python3
+        pip install --upgrade openai
+        pip install openai[embeddings]
+        pip install openai[wandb]
+fi
 mkdir -p ~/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp ycm_extra_conf.py ~/.vim/
