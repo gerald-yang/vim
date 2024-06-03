@@ -5,9 +5,6 @@ mkdir -p ~/.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp -r colors ~/.vim/
 cp vimrc ~/.vimrc
-mkdir -p ~/bin
-cp vimindex ~/bin/
-chmod +x ~/bin/vimindex
 mkdir -p ~/.fonts
 cp Monaco_Linux.ttf ~/.fonts/
 fc-cache -fv
