@@ -144,10 +144,6 @@ let g:gutentags_modules = ['gtags_cscope']
 let g:gutentags_cache_dir = expand('~/.cache/gtags')
 "let g:gutentags_auto_add_gtags_cscope = 0
 
-" python-mode
-let g:pymode_rope = 1
-let g:pymode_rope_goto_definition_bind = 'mp'
-
 " jedi-vim
 let g:jedi#documentation_command = "mk"
 let g:jedi#max_doc_height = 20
@@ -188,32 +184,16 @@ let g:go_fmt_command = "goimports"
 " Status line types/signatures
 let g:go_auto_type_info = 1
 
-" vim-ai
-let g:vim_ai_chat = {
-\  "options": {
-\    "model": "gpt-3.5-turbo",
-\    "temperature": 0,
-\  },
-\}
-
-" vim-chatgpt
-let g:chat_gpt_model='gpt-3.5-turbo'
-let g:chat_gpt_session_mode=1
-let g:chat_gpt_temperature = 0
-
 au filetype go inoremap <buffer> . .<C-x><C-o>
 
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
-
-" My plugins
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'majutsushi/tagbar'
 Plug 'chazy/cscope_maps'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Raimondi/delimitMate'
@@ -223,14 +203,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'will133/vim-dirdiff'
-"Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
-"Plug 'AutoComplPop'
 Plug 'fatih/vim-go'
-Plug 'madox2/vim-ai', { 'do': './install.sh' }
-Plug 'CoderCookE/vim-chatgpt'
-
-"vim-plug session end
 call plug#end()
-
-"let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
