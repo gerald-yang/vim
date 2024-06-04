@@ -11,10 +11,10 @@ map me <C-\>e
 map mc <C-\>c
 
 " save current session
-map ,y :mksession! .session.vim<CR>
-map ,h :split<CR>
-map ,v :vsplit<CR>
-map ,t :terminal<CR>
+map my :mksession! .session.vim<CR>
+map mh :split<CR>
+map mv :vsplit<CR>
+map mt :terminal<CR>
 
 set background=dark
 "colorscheme solarized
@@ -36,7 +36,7 @@ set expandtab
 set hlsearch
 hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray
 map mn :hi Search cterm=None ctermfg=Cyan ctermbg=DarkGray<CR>
-map nh :nohlsearch<CR>
+map ,h :nohlsearch<CR>
 
 " fold settings, zc: fold, zo: unfold
 set foldmethod=syntax
@@ -57,10 +57,10 @@ set nu
 set rnu
 set nocsverb
 " no line number
-map ma :set nornu<CR>:set nonu<CR>
+map ,a :set nornu<CR>:set nonu<CR>
 nmap <C-a> :set nornu<CR>:set nonu<CR>
 " set line number
-map mz :set nu<CR>:set rnu<CR>
+map ,z :set nu<CR>:set rnu<CR>
 nmap <C-e> :set nu<CR>:set rnu<CR>
 
 set undolevels=500
