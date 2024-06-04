@@ -11,9 +11,10 @@ map me <C-\>e
 map mc <C-\>c
 
 " save current session
-map my :mksession! .session.vim<CR>
-map mh :split<CR>
-map mv :vsplit<CR>
+map ,y :mksession! .session.vim<CR>
+map ,h :split<CR>
+map ,v :vsplit<CR>
+map ,t :terminal<CR>
 
 set background=dark
 "colorscheme solarized
@@ -107,15 +108,15 @@ let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 
 " Nerdtree
-map m2 :NERDTreeToggle<CR>
+map ,2 :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=25
 
 " Tagbar
-map m3 :TagbarToggle<CR>
+map ,3 :TagbarToggle<CR>
 
 " git-gutter
-map m4 :GitGutterToggle<CR>
-map m5 :GitGutterLineHighlightsToggle<CR>
+map ,4 :GitGutterToggle<CR>
+map ,5 :GitGutterLineHighlightsToggle<CR>
 map gn :GitGutterNextHunk<CR>
 map gp :GitGutterPrevHunk<CR>
 set updatetime=300
