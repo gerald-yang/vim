@@ -146,46 +146,46 @@ let g:gutentags_cache_dir = expand('~/.cache/gtags')
 "let g:gutentags_auto_add_gtags_cscope = 0
 
 " jedi-vim
-let g:jedi#documentation_command = "mk"
-let g:jedi#max_doc_height = 20
-let g:jedi#goto_command = "mg"
-let g:jedi#goto_assignments_command = "mj"
+"let g:jedi#documentation_command = "mk"
+"let g:jedi#max_doc_height = 20
+"let g:jedi#goto_command = "mg"
+"let g:jedi#goto_assignments_command = "mj"
 
-" vim-go
-map gb :GoBuild<CR>
-map gr :GoRun<CR>
-map gq :GoDoc<CR>
+" vim-go deprecated, switch to lunarvim
+"map gb :GoBuild<CR>
+"map gr :GoRun<CR>
+"map gq :GoDoc<CR>
 " built-in: gd (goto definition)
-map gt :GoDefType<CR>
+"map gt :GoDefType<CR>
 " GoImplements list implementations of an interface
-map gi :GoImplements<CR>
-map gcr :GoCallers<CR>
-map gce :GoCallees<CR>
-map gs :GoReferrers<CR>
-map gcs :GoCallstack<CR>
-map gpt :GoPointsTo<CR>
-map gpr :GoPeers<CR>
+"map gi :GoImplements<CR>
+"map gcr :GoCallers<CR>
+"map gce :GoCallees<CR>
+"map gs :GoReferrers<CR>
+"map gcs :GoCallstack<CR>
+"map gpt :GoPointsTo<CR>
+"map gpr :GoPeers<CR>
 " :GoDef but opens in a vertical split
-autocmd FileType go nmap gv <Plug>(go-def-vertical)
+"autocmd FileType go nmap gv <Plug>(go-def-vertical)
 " :GoDef but opens in a horizontal split
-autocmd FileType go nmap gh <Plug>(go-def-split)
+"autocmd FileType go nmap gh <Plug>(go-def-split)
 " Do not use K
-let g:go_doc_keywordprg_enabled = 0
+"let g:go_doc_keywordprg_enabled = 0
 " Go syntax highlighting
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_operators = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_function_calls = 1
+"let g:go_highlight_extra_types = 1
+"let g:go_highlight_operators = 1
 
 " Auto formatting and importing
-let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
+"let g:go_fmt_autosave = 1
+"let g:go_fmt_command = "goimports"
 
 " Status line types/signatures
-let g:go_auto_type_info = 1
+"let g:go_auto_type_info = 1
 
-au filetype go inoremap <buffer> . .<C-x><C-o>
+"au filetype go inoremap <buffer> . .<C-x><C-o>
 
 " vim-plug session begin
 call plug#begin('~/.vim/plugged')
@@ -204,6 +204,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'will133/vim-dirdiff'
-Plug 'davidhalter/jedi-vim'
-Plug 'fatih/vim-go'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'fatih/vim-go'
 call plug#end()
