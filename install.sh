@@ -17,7 +17,7 @@ if [ -z "$setup_path" ]; then
         echo 'export PATH=$PATH:~/bin' >> ~/.bashrc
 fi
 
-# Remove go env, switch to lunarvim
+# Remove go env, switch to cursor
 #echo "Install GO? y or n: "
 #read INSTALL_GO
 #if [ "$INSTALL_GO" = "y" ] ; then
