@@ -2,7 +2,7 @@ if has("gui_running")
   set gfn=Monaco\ 12
 endif
 
-" use m and , as my customized leader character
+" use both 'm' and ',' as my customized leader character
 
 " gtags wrapper for cscope
 map mm <C-]>
@@ -47,13 +47,9 @@ set nu
 set rnu
 set nocsverb
 
-" disable line number
+" enable or disable line number
 map ,a :set nornu<CR>:set nonu<CR>
-nmap <C-a> :set nornu<CR>:set nonu<CR>
-
-" enable line number
 map ,z :set nu<CR>:set rnu<CR>
-nmap <C-e> :set nu<CR>:set rnu<CR>
 
 set undolevels=500
 
@@ -83,6 +79,7 @@ map <C-l> <C-W>l
 " fzf
 map ff :Files<CR>
 map fb :Buffer<CR>
+" fzf git related
 map fg :GFiles?<CR>
 map fc :Commits<CR>
 
